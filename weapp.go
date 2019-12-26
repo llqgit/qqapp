@@ -1,8 +1,8 @@
 package weapp
 
 const (
-	// baseURL 微信请求基础URL
-	baseURL = "https://api.weixin.qq.com"
+	// baseURL QQ请求基础URL
+	baseURL = "https://api.q.qq.com"
 )
 
 // POST 参数

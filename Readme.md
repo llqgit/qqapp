@@ -1,5 +1,14 @@
 # ![title](title.png)
 
+## **写在最前面**
+> 本项目 fork 了 `github.com/medivhzhan/weapp`
+> 仅修改 host 地址为 `https://api.q.qq.com`，并没有进行详细测试。
+
+
+- **生产环境请慎用。**
+- **生产环境请慎用。**
+- **生产环境请慎用。**
+
 ## `注意` ⚠️
 
 - [v1 版本入口](https://github.com/medivhzhan/weapp/tree/v1)

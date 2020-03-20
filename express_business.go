@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiBindAccount        = "/cgi-bin/express/business/account/bind"

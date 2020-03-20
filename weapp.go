@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	// baseURL QQ请求基础URL

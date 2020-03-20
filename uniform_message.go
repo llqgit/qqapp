@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiSendUniformMessage = "/cgi-bin/message/wxopen/template/uniform_send"

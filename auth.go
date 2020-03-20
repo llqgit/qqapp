@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiLogin          = "/sns/jscode2session"

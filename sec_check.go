@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 // 检测地址
 const (

@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiVerifySignature = "/cgi-bin/soter/verify_signature"

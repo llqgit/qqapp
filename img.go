@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiAICrop          = "/cv/img/aicrop"

@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 import (
 	"net/http"

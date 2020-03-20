@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 type (
 	object = map[string]interface{}

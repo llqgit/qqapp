@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiSubscribeMessage = "/cgi-bin/message/subscribe/send"

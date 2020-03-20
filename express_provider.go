@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiGetContact      = "/cgi-bin/express/delivery/contact/get"

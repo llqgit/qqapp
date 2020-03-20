@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiAbnormalConfirm         = "/cgi-bin/express/local/business/order/confirm_return"

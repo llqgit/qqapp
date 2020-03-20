@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiCreateActivityID = "/cgi-bin/message/wxopen/activityid/create"

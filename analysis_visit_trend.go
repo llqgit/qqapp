@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 const (
 	apiGetMonthlyVisitTrend = "/datacube/getweanalysisappidmonthlyvisittrend"

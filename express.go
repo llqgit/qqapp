@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 // ExpressOrder 物流订单
 type ExpressOrder struct {

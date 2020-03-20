@@ -1,4 +1,4 @@
-package weapp
+package qqapp
 
 type dateRange struct {
 	BeginDate string `json:"begin_date"`

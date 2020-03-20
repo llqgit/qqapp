@@ -21,7 +21,7 @@
 
 ```sh
 
-go get -u github.com/medivhzhan/weapp/v2
+go get -u github.com/llqgit/qqapp/v2
 
 ```
 
@@ -163,7 +163,7 @@ go get -u github.com/medivhzhan/weapp/v2
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.Login("appid", "secret", "code")
 if err != nil {
@@ -189,8 +189,7 @@ fmt.Printf("返回结果: %#v", res)
 [官方文档](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/user-info/auth.getPaidUnionId.html)
 
 ```go
-
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetPaidUnionID("access-token", "open-id", "transaction-id")
 // 或者
@@ -222,7 +221,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetAccessToken("appid", "secret")
 if err != nil {
@@ -251,7 +250,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetDailyRetain("access-token", "begin-date", "end-date")
 if err != nil {
@@ -274,7 +273,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetWeeklyRetain("access-token", "begin-date", "end-date")
 if err != nil {
@@ -297,7 +296,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetMonthlyRetain("access-token", "begin-date", "end-date")
 if err != nil {
@@ -320,7 +319,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetDailySummary("access-token", "begin-date", "end-date")
 if err != nil {
@@ -345,7 +344,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetDailyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
@@ -368,7 +367,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetWeeklyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
@@ -391,7 +390,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetMonthlyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
@@ -414,7 +413,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetUserPortrait("access-token", "begin-date", "end-date")
 if err != nil {
@@ -437,7 +436,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetVisitDistribution("access-token", "begin-date", "end-date")
 if err != nil {
@@ -460,7 +459,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetVisitPage("access-token", "begin-date", "end-date")
 if err != nil {
@@ -487,7 +486,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 resp, res, err := weapp.GetTempMedia("access-token", "media-id")
 if err != nil {
@@ -511,7 +510,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 
 // 文本消息
@@ -560,7 +559,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.SetTyping("access-token", "open-id", weapp.SetTypingCommandTyping)
 if err != nil {
@@ -583,7 +582,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.UploadTempMedia("access-token", weapp.TempMediaTypeImage, "media-filename")
 if err != nil {
@@ -610,7 +609,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 sender := weapp.UniformMsgSender{
     ToUser: "open-id",
@@ -659,7 +658,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.CreateActivityId("access-token")
 if err != nil {
@@ -682,7 +681,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 
 setter := weapp.UpdatableMsgSetter{
@@ -721,7 +720,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.ApplyPlugin("access-token", "plugin-app-id", "reason")
 if err != nil {
@@ -744,7 +743,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetPluginDevApplyList("access-token", 1, 2)
 if err != nil {
@@ -767,7 +766,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetPluginList("access-token")
 if err != nil {
@@ -790,7 +789,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.SetDevPluginApplyStatus("access-token", "plugin-app-id", "reason", weapp.DevAgree)
 if err != nil {
@@ -813,7 +812,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.UnbindPlugin("access-token", "plugin-app-id")
 if err != nil {
@@ -840,7 +839,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 poi := NearbyPoi{
     PicList: PicList{[]string{"first-picture-url", "second-picture-url", "third-picture-url"}},
@@ -894,7 +893,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.DeleteNearbyPoi("access-token", "poi-id")
 if err != nil {
@@ -917,7 +916,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetNearbyPoiList("access-token", 1, 10)
 if err != nil {
@@ -940,7 +939,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.SetNearbyPoiShowStatus("access-token", "poi-id", weapp.ShowNearbyPoi)
 // 或者
@@ -971,7 +970,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import (
     "ioutil"
-    "github.com/medivhzhan/weapp/v2"
+    "github.com/llqgit/qqapp/v2"
 )
 
 
@@ -1005,7 +1004,7 @@ content, err := ioutil.ReadAll(resp.Body)
 
 import (
     "ioutil"
-    "github.com/medivhzhan/weapp/v2"
+    "github.com/llqgit/qqapp/v2"
 )
 
 
@@ -1042,7 +1041,7 @@ content, err := ioutil.ReadAll(resp.Body)
 
 import (
     "ioutil"
-    "github.com/medivhzhan/weapp/v2"
+    "github.com/llqgit/qqapp/v2"
 )
 
 
@@ -1082,7 +1081,7 @@ content, err := ioutil.ReadAll(resp.Body)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.IMGSecCheck("access-token", "local-filename")
 if err != nil {
@@ -1105,7 +1104,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.MediaCheckAsync("access-token", "image-url", weapp.MediaTypeImage)
 if err != nil {
@@ -1144,7 +1143,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.MSGSecCheck("access-token", "message-content")
 if err != nil {
@@ -1171,7 +1170,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.AICrop("access-token", "filename")
 // 或者
@@ -1196,7 +1195,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.ScanQRCode("access-token", "file-path")
 // 或者
@@ -1221,7 +1220,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.SuperResolution("access-token", "file-path")
 // 或者
@@ -1252,7 +1251,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 mocker := weapp.DeliveryOrderUpdater{
    // ...
@@ -1279,7 +1278,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1308,7 +1307,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1337,7 +1336,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1366,7 +1365,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1395,7 +1394,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1424,7 +1423,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1453,7 +1452,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1482,7 +1481,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1511,7 +1510,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1540,7 +1539,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1569,7 +1568,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1598,7 +1597,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1627,7 +1626,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1658,7 +1657,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 confirmer := weapp.AbnormalConfirmer{
     ShopID:       "123456",
@@ -1690,7 +1689,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 creator := weapp.DeliveryOrderCreator{
    // ...
@@ -1717,7 +1716,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 adder := weapp.DeliveryTipAdder{
    // ...
@@ -1744,7 +1743,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 canceler := weapp.DeliveryOrderCanceler{
    // ...
@@ -1771,7 +1770,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetAllImmediateDelivery("access-token")
 if err != nil {
@@ -1794,7 +1793,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetBindAccount("access-token")
 if err != nil {
@@ -1817,7 +1816,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 getter := weapp.DeliveryOrderGetter{
    // ...
@@ -1844,7 +1843,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 mocker := weapp.UpdateDeliveryOrderMocker{
    // ...
@@ -1871,7 +1870,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -1900,7 +1899,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 creator := weapp.DeliveryOrderCreator{
    // ...
@@ -1927,7 +1926,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 canceler := weapp.DeliveryOrderCanceler{
    // ...
@@ -1954,7 +1953,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 creator := weapp.DeliveryOrderCreator{
    // ...
@@ -1987,7 +1986,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 creator := weapp.ExpressOrderCreator{
    // ...
@@ -2014,7 +2013,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 canceler := weapp.ExpressOrderCanceler{
    // ...
@@ -2041,7 +2040,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.getAllDelivery("access-token")
 if err != nil {
@@ -2064,7 +2063,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 getter := weapp.ExpressOrderGetter{
    // ...
@@ -2091,7 +2090,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 getter := weapp.ExpressPathGetter{
    // ...
@@ -2118,7 +2117,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetPrinter("access-token")
 if err != nil {
@@ -2141,7 +2140,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 getter := weapp.QuotaGetter{
    // ...
@@ -2168,7 +2167,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -2193,7 +2192,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 tester := weapp.UpdateExpressOrderTester{
    // ...
@@ -2220,7 +2219,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 updater := weapp.PrinterUpdater{
    // ...
@@ -2249,7 +2248,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.GetContact("access-token", "token", "wat-bill-id")
 if err != nil {
@@ -2272,7 +2271,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -2301,7 +2300,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -2330,7 +2329,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -2359,7 +2358,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
@@ -2388,7 +2387,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 previewer := weapp.ExpressTemplatePreviewer{
    // ...
@@ -2415,7 +2414,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 updater := weapp.BusinessUpdater{
    // ...
@@ -2442,7 +2441,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 updater := weapp.ExpressPathUpdater{
    // ...
@@ -2473,7 +2472,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.BankCard("access-token", "file-path", weapp.RecognizeModeScan)
 // 或者
@@ -2498,7 +2497,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.BusinessLicense("access-token", "file-path")
 // 或者
@@ -2523,7 +2522,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.DriverLicense("access-token", "file-path")
 // 或者
@@ -2548,7 +2547,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.IDCardByURL("access-token", "card-url", weapp.RecognizeModePhoto)
 // 或者
@@ -2573,7 +2572,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.PrintedText("access-token", "file-path")
 // 或者
@@ -2598,7 +2597,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.VehicleLicense("access-token", "file-path", weapp.RecognizeModeScan)
 // 或者
@@ -2627,7 +2626,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.VerifySignature("access-token", "open-id", "data", "signature")
 if err != nil {
@@ -2654,7 +2653,7 @@ fmt.Printf("返回结果: %#v", res)
 
 ```go
 
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 sender := weapp.SubscribeMessage{
     ToUser:     mpOpenID,
@@ -2696,7 +2695,7 @@ fmt.Printf("返回结果: %#v", res)
 ### 解密手机号码
 
 ```go
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.DecryptMobile("session-key", "encrypted-date", "iv" )
 if err != nil {
@@ -2710,7 +2709,7 @@ fmt.Printf("返回结果: %#v", res)
 ### 解密分享内容
 
 ```go
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.DecryptShareInfo("session-key", "encrypted-date", "iv" )
 if err != nil {
@@ -2724,7 +2723,7 @@ fmt.Printf("返回结果: %#v", res)
 ### 解密用户信息
 
 ```go
-import "github.com/medivhzhan/weapp/v2"
+import "github.com/llqgit/qqapp/v2"
 
 res, err := weapp.DecryptUserInfo( "session-key", "raw-data", "encrypted-date", "signature", "iv")
 if err != nil {

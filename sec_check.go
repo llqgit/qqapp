@@ -2,13 +2,13 @@ package qqapp
 
 // 检测地址
 const (
-	apiIMGSecCheck     = "/wxa/img_sec_check"
-	apiMSGSecCheck     = "/wxa/msg_sec_check"
-	apiMediaCheckAsync = "/wxa/media_check_async"
+	apiIMGSecCheck     = "/api/json/security/ImgSecCheck"
+	apiMSGSecCheck     = "/api/json/security/MsgSecCheck"
+	apiMediaCheckAsync = "/api/json/security/MediaCheckAsync"
 )
 
 // IMGSecCheck 本地图片检测
-// 官方文档: https://developers.weixin.qq.com/miniprogram/dev/api/imgSecCheck.html
+// 官方文档: https://q.qq.com/wiki/develop/miniprogram/server/open_port/port_safe.html
 //
 // filename 要检测的图片本地路径
 // token 接口调用凭证(access_token)

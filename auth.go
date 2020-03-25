@@ -2,7 +2,7 @@ package qqapp
 
 const (
 	apiLogin          = "/sns/jscode2session"
-	apiGetAccessToken = "/cgi-bin/token"
+	apiGetAccessToken = "/api/getToken"
 	apiGetPaidUnionID = "/wxa/getpaidunionid"
 )
 

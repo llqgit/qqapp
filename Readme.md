@@ -1,7 +1,7 @@
 # ![title](title.png)
 
 ## **写在最前面**
-> 本项目 fork 了 `github.com/medivhzhan/weapp`
+> 本项目 fork 了 `github.com/medivhzhan/qqapp`
 > 仅修改 host 地址为 `https://api.q.qq.com`，并没有进行详细测试。
 
 
@@ -11,7 +11,7 @@
 
 ## `注意` ⚠️
 
-- [v1 版本入口](https://github.com/medivhzhan/weapp/tree/v1)
+- [v1 版本入口](https://github.com/medivhzhan/qqapp/tree/v1)
 - v2 暂时不包含支付相关内容
 - 为了保证大家及时用上新功能，已发布 v2 版本，请大家使用经过线上认证 ✅ 的接口。
 - 所有接口均已完成，其他接口将在经过线上测试后在新版本中提供给大家。
@@ -35,30 +35,30 @@ go get -u github.com/llqgit/qqapp/v2
 - [登录](#登录)
   - [code2Session](#code2Session) ✅
 - [用户信息](#用户信息)
-  - [getPaidUnionId](#getPaidUnionId) ✅
+  - [getPaidUnionId](#getPaidUnionId) 
 - [接口调用凭证](#接口调用凭证)
   - [getAccessToken](#getAccessToken) ✅
 - [数据分析](#数据分析)
   - [访问留存](#访问留存)
-    - [getDailyRetain](#getDailyRetain) ✅
-    - [getWeeklyRetain](#getWeeklyRetain) ✅
-    - [getMonthlyRetain](#getMonthlyRetain) ✅
-  - [getDailySummary](#getDailySummary) ✅
+    - [getDailyRetain](#getDailyRetain) 
+    - [getWeeklyRetain](#getWeeklyRetain) 
+    - [getMonthlyRetain](#getMonthlyRetain) 
+  - [getDailySummary](#getDailySummary) 
   - [访问趋势](#访问趋势)
-    - [getDailyVisitTrend](#getDailyVisitTrend) ✅
-    - [getWeeklyVisitTrend](#getWeeklyVisitTrend) ✅
-    - [getMonthlyVisitTrend](#getMonthlyVisitTrend) ✅
-  - [getUserPortrait](#getUserPortrait) ✅
-  - [getVisitDistribution](#getVisitDistribution) ✅
-  - [getVisitPage](#getVisitPage) ✅
+    - [getDailyVisitTrend](#getDailyVisitTrend) 
+    - [getWeeklyVisitTrend](#getWeeklyVisitTrend) 
+    - [getMonthlyVisitTrend](#getMonthlyVisitTrend) 
+  - [getUserPortrait](#getUserPortrait) 
+  - [getVisitDistribution](#getVisitDistribution) 
+  - [getVisitPage](#getVisitPage) 
 - [客服消息](#客服消息)
-  - [getTempMedia](#getTempMedia) ✅
-  - [sendCustomerServiceMessage](#sendCustomerServiceMessage) ✅
-  - [setTyping](#setTyping) ✅
-  - [uploadTempMedia](#uploadTempMedia) ✅
+  - [getTempMedia](#getTempMedia) 
+  - [sendCustomerServiceMessage](#sendCustomerServiceMessage) 
+  - [setTyping](#setTyping) 
+  - [uploadTempMedia](#uploadTempMedia) 
 - [模板消息](#模板消息)(腾讯将于 2020 年 1 月 10 日下线该接口，请使用 [`订阅消息`](#订阅消息))
 - [统一服务消息](#统一服务消息)
-  - [sendUniformMessage](#sendUniformMessage) ✅
+  - [sendUniformMessage](#sendUniformMessage) 
 - [动态消息](#动态消息)
   - [createActivityId](#createActivityId)
   - [setUpdatableMsg](#setUpdatableMsg)
@@ -73,17 +73,17 @@ go get -u github.com/llqgit/qqapp/v2
   - [deleteNearbyPoi](#deleteNearbyPoi)
   - [getNearbyPoiList](#getNearbyPoiList)
   - [setNearbyPoiShowStatus](#setNearbyPoiShowStatus)
-- [小程序码](#小程序码) ✅
-  - [createQRCode](#createQRCode) ✅
-  - [get](#get) ✅
-  - [getUnlimited](#getUnlimited) ✅
+- [小程序码](#小程序码) 
+  - [createQRCode](#createQRCode) 
+  - [get](#get) 
+  - [getUnlimited](#getUnlimited) 
 - [内容安全](#内容安全)
   - [imgSecCheck](#imgSecCheck) ✅
-  - [mediaCheckAsync](#mediaCheckAsync)
+  - [mediaCheckAsync](#mediaCheckAsync) ✅
   - [msgSecCheck](#msgSecCheck) ✅
 - [图像处理](#图像处理)
-  - [aiCrop](#aiCrop) ✅
-  - [scanQRCode](#scanQRCode) ✅
+  - [aiCrop](#aiCrop) 
+  - [scanQRCode](#scanQRCode) 
   - [superResolution](#superResolution)
 - [及时配送](#及时配送) ⚠️
   - [小程序使用](#小程序使用)
@@ -136,18 +136,18 @@ go get -u github.com/llqgit/qqapp/v2
     - [updateExpressBusiness](#updateExpressBusiness)
     - [updateExpressPath](#updateExpressPath)
 - [OCR](#OCR)
-  - [bankcard](#bankcard) ✅
-  - [businessLicense](#businessLicense) ✅
-  - [driverLicense](#driverLicense) ✅
-  - [idcard](#idcard) ✅
-  - [printedText](#printedText) ✅
-  - [vehicleLicense](#vehicleLicense) ✅
+  - [bankcard](#bankcard) 
+  - [businessLicense](#businessLicense) 
+  - [driverLicense](#driverLicense) 
+  - [idcard](#idcard) 
+  - [printedText](#printedText) 
+  - [vehicleLicense](#vehicleLicense) 
 - [运维中心](#运维中心) ⚠️
   - [realTimeLogSearch](#realTimeLogSearch)
 - [生物认证](#生物认证)
   - [verifySignature](#verifySignature)
 - [订阅消息](#订阅消息)
-  - [sendSubscribeMessage](#sendSubscribeMessage) ✅
+  - [sendSubscribeMessage](#sendSubscribeMessage) 
 - [解密](#解密)
   - [解密手机号码](#解密手机号码) ✅
   - [解密分享内容](#解密分享内容)
@@ -165,7 +165,7 @@ go get -u github.com/llqgit/qqapp/v2
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.Login("appid", "secret", "code")
+res, err := qqapp.Login("appid", "secret", "code")
 if err != nil {
     // 处理一般错误信息
     return
@@ -191,9 +191,9 @@ fmt.Printf("返回结果: %#v", res)
 ```go
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetPaidUnionID("access-token", "open-id", "transaction-id")
+res, err := qqapp.GetPaidUnionID("access-token", "open-id", "transaction-id")
 // 或者
-res, err := weapp.GetPaidUnionIDWithMCH("access-token", "open-id", "out-trade-number", "mch-id")
+res, err := qqapp.GetPaidUnionIDWithMCH("access-token", "open-id", "out-trade-number", "mch-id")
 
 if err != nil {
     // 处理一般错误信息
@@ -223,7 +223,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetAccessToken("appid", "secret")
+res, err := qqapp.GetAccessToken("appid", "secret")
 if err != nil {
     // 处理一般错误信息
     return
@@ -252,7 +252,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetDailyRetain("access-token", "begin-date", "end-date")
+res, err := qqapp.GetDailyRetain("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -275,7 +275,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetWeeklyRetain("access-token", "begin-date", "end-date")
+res, err := qqapp.GetWeeklyRetain("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -298,7 +298,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetMonthlyRetain("access-token", "begin-date", "end-date")
+res, err := qqapp.GetMonthlyRetain("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -321,7 +321,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetDailySummary("access-token", "begin-date", "end-date")
+res, err := qqapp.GetDailySummary("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -346,7 +346,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetDailyVisitTrend("access-token", "begin-date", "end-date")
+res, err := qqapp.GetDailyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -369,7 +369,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetWeeklyVisitTrend("access-token", "begin-date", "end-date")
+res, err := qqapp.GetWeeklyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -392,7 +392,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetMonthlyVisitTrend("access-token", "begin-date", "end-date")
+res, err := qqapp.GetMonthlyVisitTrend("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -415,7 +415,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetUserPortrait("access-token", "begin-date", "end-date")
+res, err := qqapp.GetUserPortrait("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -438,7 +438,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetVisitDistribution("access-token", "begin-date", "end-date")
+res, err := qqapp.GetVisitDistribution("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -461,7 +461,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetVisitPage("access-token", "begin-date", "end-date")
+res, err := qqapp.GetVisitPage("access-token", "begin-date", "end-date")
 if err != nil {
     // 处理一般错误信息
     return
@@ -488,7 +488,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-resp, res, err := weapp.GetTempMedia("access-token", "media-id")
+resp, res, err := qqapp.GetTempMedia("access-token", "media-id")
 if err != nil {
     // 处理一般错误信息
     return
@@ -514,17 +514,17 @@ import "github.com/llqgit/qqapp/v2"
 
 
 // 文本消息
-msg := weapp.CSMsgText{
+msg := qqapp.CSMsgText{
     Content: "content",
 }
 // 或者
 // 图片消息
-msg := weapp.CSMsgImage{
+msg := qqapp.CSMsgImage{
     MediaID: "media-id",
 }
 // 或者
 // 链接消息
-msg := weapp.CSMsgLink{
+msg := qqapp.CSMsgLink{
     Title:       "title",
     Description: "description",
     URL:         "url",
@@ -532,7 +532,7 @@ msg := weapp.CSMsgLink{
 }
 // 或者
 // 小程序卡片消息
-msg := weapp.CSMsgMPCard{
+msg := qqapp.CSMsgMPCard{
     Title:        "title",
     PagePath:     "page-path",
     ThumbMediaID: "thumb-media-id",
@@ -561,7 +561,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.SetTyping("access-token", "open-id", weapp.SetTypingCommandTyping)
+res, err := qqapp.SetTyping("access-token", "open-id", qqapp.SetTypingCommandTyping)
 if err != nil {
     // 处理一般错误信息
     return
@@ -584,7 +584,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.UploadTempMedia("access-token", weapp.TempMediaTypeImage, "media-filename")
+res, err := qqapp.UploadTempMedia("access-token", qqapp.TempMediaTypeImage, "media-filename")
 if err != nil {
     // 处理一般错误信息
     return
@@ -611,23 +611,23 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-sender := weapp.UniformMsgSender{
+sender := qqapp.UniformMsgSender{
     ToUser: "open-id",
-    UniformWeappTmpMsg: weapp.UniformWeappTmpMsg{
+    UniformqqappTmpMsg: qqapp.UniformqqappTmpMsg{
         TemplateID: "template-id",
         Page:       "page",
         FormID:     "form-id",
-        Data: weapp.UniformMsgData{
+        Data: qqapp.UniformMsgData{
             "keyword": {Value: "value"},
         },
         EmphasisKeyword: "keyword.DATA",
     },
-    UniformMpTmpMsg: weapp.UniformMpTmpMsg{
+    UniformMpTmpMsg: qqapp.UniformMpTmpMsg{
         AppID:       "app-id",
         TemplateID:  "template-id",
         URL:         "url",
-        Miniprogram: weapp.UniformMsgMiniprogram{"miniprogram-app-id", "page-path"},
-        Data: weapp.UniformMsgData{
+        Miniprogram: qqapp.UniformMsgMiniprogram{"miniprogram-app-id", "page-path"},
+        Data: qqapp.UniformMsgData{
             "keyword": {"value", "color"},
         },
     },
@@ -660,7 +660,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.CreateActivityId("access-token")
+res, err := qqapp.CreateActivityId("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -684,7 +684,7 @@ fmt.Printf("返回结果: %#v", res)
 import "github.com/llqgit/qqapp/v2"
 
 
-setter := weapp.UpdatableMsgSetter{
+setter := qqapp.UpdatableMsgSetter{
     "activity-id",
     UpdatableMsgJoining,
     UpdatableMsgTempInfo{
@@ -722,7 +722,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.ApplyPlugin("access-token", "plugin-app-id", "reason")
+res, err := qqapp.ApplyPlugin("access-token", "plugin-app-id", "reason")
 if err != nil {
     // 处理一般错误信息
     return
@@ -745,7 +745,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetPluginDevApplyList("access-token", 1, 2)
+res, err := qqapp.GetPluginDevApplyList("access-token", 1, 2)
 if err != nil {
     // 处理一般错误信息
     return
@@ -768,7 +768,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetPluginList("access-token")
+res, err := qqapp.GetPluginList("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -791,7 +791,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.SetDevPluginApplyStatus("access-token", "plugin-app-id", "reason", weapp.DevAgree)
+res, err := qqapp.SetDevPluginApplyStatus("access-token", "plugin-app-id", "reason", qqapp.DevAgree)
 if err != nil {
     // 处理一般错误信息
     return
@@ -814,7 +814,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.UnbindPlugin("access-token", "plugin-app-id")
+res, err := qqapp.UnbindPlugin("access-token", "plugin-app-id")
 if err != nil {
     // 处理一般错误信息
     return
@@ -843,7 +843,7 @@ import "github.com/llqgit/qqapp/v2"
 
 poi := NearbyPoi{
     PicList: PicList{[]string{"first-picture-url", "second-picture-url", "third-picture-url"}},
-    ServiceInfos: weapp.ServiceInfos{[]weapp.ServiceInfo{
+    ServiceInfos: qqapp.ServiceInfos{[]qqapp.ServiceInfo{
         {1, 1, "name", "app-id", "path"},
     }},
     StoreName:         "store-name",
@@ -852,7 +852,7 @@ poi := NearbyPoi{
     Address:           "address",                         // 地址 必填
     CompanyName:       "company-name",                    // 主体名字 必填
     QualificationList: "qualification-list",              // 证明材料 必填 如果company_name和该小程序主体不一致，需要填qualification_list，详细规则见附近的小程序使用指南-如何证明门店的经营主体跟公众号或小程序帐号主体相关http://kf.qq.com/faq/170401MbUnim17040122m2qY.html
-    KFInfo:            weapp.KFInfo{true, "kf-head-img", "kf-name"}, // 客服信息 选填，可自定义服务头像与昵称，具体填写字段见下方示例kf_info pic_list是字符串，内容是一个json！
+    KFInfo:            qqapp.KFInfo{true, "kf-head-img", "kf-name"}, // 客服信息 选填，可自定义服务头像与昵称，具体填写字段见下方示例kf_info pic_list是字符串，内容是一个json！
     PoiID:             "poi-id",                          // 如果创建新的门店，poi_id字段为空 如果更新门店，poi_id参数则填对应门店的poi_id 选填
 }
 
@@ -870,13 +870,13 @@ if err := res.GetResponseError(); err !=nil {
 fmt.Printf("返回结果: %#v", res)
 
 // 接收并处理异步结果
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnAddNearbyPoi(func(mix *weapp.AddNearbyPoiResult) {
+srv.OnAddNearbyPoi(func(mix *qqapp.AddNearbyPoiResult) {
     // 处理返回结果
 })
 
@@ -895,7 +895,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.DeleteNearbyPoi("access-token", "poi-id")
+res, err := qqapp.DeleteNearbyPoi("access-token", "poi-id")
 if err != nil {
     // 处理一般错误信息
     return
@@ -918,7 +918,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetNearbyPoiList("access-token", 1, 10)
+res, err := qqapp.GetNearbyPoiList("access-token", 1, 10)
 if err != nil {
     // 处理一般错误信息
     return
@@ -941,9 +941,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.SetNearbyPoiShowStatus("access-token", "poi-id", weapp.ShowNearbyPoi)
+res, err := qqapp.SetNearbyPoiShowStatus("access-token", "poi-id", qqapp.ShowNearbyPoi)
 // 或者
-res, err := weapp.SetNearbyPoiShowStatus("access-token", "poi-id", weapp.HideNearbyPoi)
+res, err := qqapp.SetNearbyPoiShowStatus("access-token", "poi-id", qqapp.HideNearbyPoi)
 if err != nil {
     // 处理一般错误信息
     return
@@ -974,7 +974,7 @@ import (
 )
 
 
-creator := weapp.QRCodeCreator{
+creator := qqapp.QRCodeCreator{
     Path:  "mock/path",
     Width: 430,
 }
@@ -1008,11 +1008,11 @@ import (
 )
 
 
-getter := weapp.QRCode{
+getter := qqapp.QRCode{
     Path:      "mock/path",
     Width:     430,
     AutoColor: true,
-    LineColor: weapp.Color{"r", "g", "b"},
+    LineColor: qqapp.Color{"r", "g", "b"},
     IsHyaline: true,
 }
 
@@ -1045,12 +1045,12 @@ import (
 )
 
 
-getter :=  weapp.UnlimitedQRCode{
+getter :=  qqapp.UnlimitedQRCode{
     Scene:     "scene-data",
     Page:      "mock/page",
     Width:     430,
     AutoColor: true,
-    LineColor: weapp.Color{"r", "g", "b"},
+    LineColor: qqapp.Color{"r", "g", "b"},
     IsHyaline: true,
 }
 
@@ -1083,7 +1083,7 @@ content, err := ioutil.ReadAll(resp.Body)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.IMGSecCheck("access-token", "local-filename")
+res, err := qqapp.IMGSecCheck("access-token", "local-filename")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1106,7 +1106,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.MediaCheckAsync("access-token", "image-url", weapp.MediaTypeImage)
+res, err := qqapp.MediaCheckAsync("access-token", "image-url", qqapp.MediaTypeImage)
 if err != nil {
     // 处理一般错误信息
     return
@@ -1120,13 +1120,13 @@ if err := res.GetResponseError(); err !=nil {
 fmt.Printf("返回结果: %#v", res)
 
 // 接收并处理异步结果
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnMediaCheckAsync(func(mix *weapp.MediaCheckAsyncResult) {
+srv.OnMediaCheckAsync(func(mix *qqapp.MediaCheckAsyncResult) {
     // 处理返回结果
 })
 
@@ -1145,7 +1145,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.MSGSecCheck("access-token", "message-content")
+res, err := qqapp.MSGSecCheck("access-token", "message-content")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1172,9 +1172,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.AICrop("access-token", "filename")
+res, err := qqapp.AICrop("access-token", "filename")
 // 或者
-res, err := weapp.AICropByURL("access-token", "url")
+res, err := qqapp.AICropByURL("access-token", "url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1197,9 +1197,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.ScanQRCode("access-token", "file-path")
+res, err := qqapp.ScanQRCode("access-token", "file-path")
 // 或者
-res, err := weapp.ScanQRCodeByURL("access-token", "qr-code-url")
+res, err := qqapp.ScanQRCodeByURL("access-token", "qr-code-url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1222,9 +1222,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.SuperResolution("access-token", "file-path")
+res, err := qqapp.SuperResolution("access-token", "file-path")
 // 或者
-res, err := weapp.SuperResolutionByURL("access-token", "img-url")
+res, err := qqapp.SuperResolutionByURL("access-token", "img-url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1253,7 +1253,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-mocker := weapp.DeliveryOrderUpdater{
+mocker := qqapp.DeliveryOrderUpdater{
    // ...
 }
 
@@ -1280,16 +1280,16 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnAgentPosQuery(func(mix *weapp.AgentPosQueryResult) *weapp.AgentPosQueryReturn {
+srv.OnAgentPosQuery(func(mix *qqapp.AgentPosQueryResult) *qqapp.AgentPosQueryReturn {
     // 处理返回结果
 
-    return &weapp.AgentPosQueryReturn{
+    return &qqapp.AgentPosQueryReturn{
         // ...
     }
 })
@@ -1309,16 +1309,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnAuthInfoGet(func(mix *weapp.AuthInfoGetResult) *weapp.AuthInfoGetReturn {
+srv.OnAuthInfoGet(func(mix *qqapp.AuthInfoGetResult) *qqapp.AuthInfoGetReturn {
     // 处理返回结果
 
-    return &weapp.AuthInfoGetReturn{
+    return &qqapp.AuthInfoGetReturn{
         // ...
     }
 })
@@ -1338,16 +1338,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnCancelAuth(func(mix *weapp.CancelAuthResult) *weapp.CancelAuthReturn {
+srv.OnCancelAuth(func(mix *qqapp.CancelAuthResult) *qqapp.CancelAuthReturn {
     // 处理返回结果
 
-    return &weapp.CancelAuthReturn{
+    return &qqapp.CancelAuthReturn{
         // ...
     }
 })
@@ -1367,16 +1367,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderAdd(func(mix *weapp.DeliveryOrderAddResult) *weapp.DeliveryOrderAddReturn {
+srv.OnDeliveryOrderAdd(func(mix *qqapp.DeliveryOrderAddResult) *qqapp.DeliveryOrderAddReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderAddReturn{
+    return &qqapp.DeliveryOrderAddReturn{
         // ...
     }
 })
@@ -1396,16 +1396,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderAddTips(func(mix *weapp.DeliveryOrderAddTipsResult) *weapp.DeliveryOrderAddTipsReturn {
+srv.OnDeliveryOrderAddTips(func(mix *qqapp.DeliveryOrderAddTipsResult) *qqapp.DeliveryOrderAddTipsReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderAddTipsReturn{
+    return &qqapp.DeliveryOrderAddTipsReturn{
         // ...
     }
 })
@@ -1425,16 +1425,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderCancel(func(mix *weapp.DeliveryOrderCancelResult) *weapp.DeliveryOrderCancelReturn {
+srv.OnDeliveryOrderCancel(func(mix *qqapp.DeliveryOrderCancelResult) *qqapp.DeliveryOrderCancelReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderCancelReturn{
+    return &qqapp.DeliveryOrderCancelReturn{
         // ...
     }
 })
@@ -1454,16 +1454,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderReturnConfirm(func(mix *weapp.DeliveryOrderReturnConfirmResult) *weapp.DeliveryOrderReturnConfirmReturn {
+srv.OnDeliveryOrderReturnConfirm(func(mix *qqapp.DeliveryOrderReturnConfirmResult) *qqapp.DeliveryOrderReturnConfirmReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderReturnConfirmReturn{
+    return &qqapp.DeliveryOrderReturnConfirmReturn{
         // ...
     }
 })
@@ -1483,16 +1483,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderPreAdd(func(mix *weapp.DeliveryOrderPreAddResult) *weapp.DeliveryOrderPreAddReturn {
+srv.OnDeliveryOrderPreAdd(func(mix *qqapp.DeliveryOrderPreAddResult) *qqapp.DeliveryOrderPreAddReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderPreAddReturn{
+    return &qqapp.DeliveryOrderPreAddReturn{
         // ...
     }
 })
@@ -1512,16 +1512,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderPreCancel(func(mix *weapp.DeliveryOrderPreCancelResult) *weapp.DeliveryOrderPreCancelReturn {
+srv.OnDeliveryOrderPreCancel(func(mix *qqapp.DeliveryOrderPreCancelResult) *qqapp.DeliveryOrderPreCancelReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderPreCancelReturn{
+    return &qqapp.DeliveryOrderPreCancelReturn{
         // ...
     }
 })
@@ -1541,16 +1541,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderQuery(func(mix *weapp.DeliveryOrderQueryResult) *weapp.DeliveryOrderQueryReturn {
+srv.OnDeliveryOrderQuery(func(mix *qqapp.DeliveryOrderQueryResult) *qqapp.DeliveryOrderQueryReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderQueryReturn{
+    return &qqapp.DeliveryOrderQueryReturn{
         // ...
     }
 })
@@ -1570,16 +1570,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderReadd(func(mix *weapp.DeliveryOrderReaddResult) *weapp.DeliveryOrderReaddReturn {
+srv.OnDeliveryOrderReadd(func(mix *qqapp.DeliveryOrderReaddResult) *qqapp.DeliveryOrderReaddReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderReaddReturn{
+    return &qqapp.DeliveryOrderReaddReturn{
         // ...
     }
 })
@@ -1599,16 +1599,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnPreAuthCodeGet(func(mix *weapp.PreAuthCodeGetResult) *weapp.PreAuthCodeGetReturn {
+srv.OnPreAuthCodeGet(func(mix *qqapp.PreAuthCodeGetResult) *qqapp.PreAuthCodeGetReturn {
     // 处理返回结果
 
-    return &weapp.PreAuthCodeGetReturn{
+    return &qqapp.PreAuthCodeGetReturn{
         // ...
     }
 })
@@ -1628,16 +1628,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnRiderScoreSet(func(mix *weapp.RiderScoreSetResult) *weapp.RiderScoreSetReturn {
+srv.OnRiderScoreSet(func(mix *qqapp.RiderScoreSetResult) *qqapp.RiderScoreSetReturn {
     // 处理返回结果
 
-    return &weapp.PreAuthCodeGetReturn{
+    return &qqapp.PreAuthCodeGetReturn{
         // ...
     }
 })
@@ -1659,7 +1659,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-confirmer := weapp.AbnormalConfirmer{
+confirmer := qqapp.AbnormalConfirmer{
     ShopID:       "123456",
     ShopOrderID:  "123456",
     ShopNo:       "shop_no_111",
@@ -1691,7 +1691,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-creator := weapp.DeliveryOrderCreator{
+creator := qqapp.DeliveryOrderCreator{
    // ...
 }
 
@@ -1718,7 +1718,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-adder := weapp.DeliveryTipAdder{
+adder := qqapp.DeliveryTipAdder{
    // ...
 }
 
@@ -1745,7 +1745,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-canceler := weapp.DeliveryOrderCanceler{
+canceler := qqapp.DeliveryOrderCanceler{
    // ...
 }
 
@@ -1772,7 +1772,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetAllImmediateDelivery("access-token")
+res, err := qqapp.GetAllImmediateDelivery("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1795,7 +1795,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetBindAccount("access-token")
+res, err := qqapp.GetBindAccount("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -1818,7 +1818,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-getter := weapp.DeliveryOrderGetter{
+getter := qqapp.DeliveryOrderGetter{
    // ...
 }
 
@@ -1845,7 +1845,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-mocker := weapp.UpdateDeliveryOrderMocker{
+mocker := qqapp.UpdateDeliveryOrderMocker{
    // ...
 }
 
@@ -1872,16 +1872,16 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnDeliveryOrderStatusUpdate(func(mix *weapp.DeliveryOrderStatusUpdateResult) *weapp.DeliveryOrderStatusUpdateReturn {
+srv.OnDeliveryOrderStatusUpdate(func(mix *qqapp.DeliveryOrderStatusUpdateResult) *qqapp.DeliveryOrderStatusUpdateReturn {
     // 处理返回结果
 
-    return &weapp.DeliveryOrderStatusUpdateReturn{
+    return &qqapp.DeliveryOrderStatusUpdateReturn{
         // ...
     }
 })
@@ -1901,7 +1901,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-creator := weapp.DeliveryOrderCreator{
+creator := qqapp.DeliveryOrderCreator{
    // ...
 }
 
@@ -1928,7 +1928,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-canceler := weapp.DeliveryOrderCanceler{
+canceler := qqapp.DeliveryOrderCanceler{
    // ...
 }
 
@@ -1955,7 +1955,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-creator := weapp.DeliveryOrderCreator{
+creator := qqapp.DeliveryOrderCreator{
    // ...
 }
 
@@ -1988,7 +1988,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-creator := weapp.ExpressOrderCreator{
+creator := qqapp.ExpressOrderCreator{
    // ...
 }
 
@@ -2015,7 +2015,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-canceler := weapp.ExpressOrderCanceler{
+canceler := qqapp.ExpressOrderCanceler{
    // ...
 }
 
@@ -2042,7 +2042,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.getAllDelivery("access-token")
+res, err := qqapp.getAllDelivery("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2065,7 +2065,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-getter := weapp.ExpressOrderGetter{
+getter := qqapp.ExpressOrderGetter{
    // ...
 }
 
@@ -2092,7 +2092,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-getter := weapp.ExpressPathGetter{
+getter := qqapp.ExpressPathGetter{
    // ...
 }
 
@@ -2119,7 +2119,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetPrinter("access-token")
+res, err := qqapp.GetPrinter("access-token")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2142,7 +2142,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-getter := weapp.QuotaGetter{
+getter := qqapp.QuotaGetter{
    // ...
 }
 
@@ -2169,13 +2169,13 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnExpressPathUpdate(func(mix *weapp.ExpressPathUpdateResult) {
+srv.OnExpressPathUpdate(func(mix *qqapp.ExpressPathUpdateResult) {
     // 处理返回结果
 })
 
@@ -2194,7 +2194,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-tester := weapp.UpdateExpressOrderTester{
+tester := qqapp.UpdateExpressOrderTester{
    // ...
 }
 
@@ -2221,7 +2221,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-updater := weapp.PrinterUpdater{
+updater := qqapp.PrinterUpdater{
    // ...
 }
 
@@ -2250,7 +2250,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.GetContact("access-token", "token", "wat-bill-id")
+res, err := qqapp.GetContact("access-token", "token", "wat-bill-id")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2273,16 +2273,16 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnAddExpressOrder(func(mix *weapp.AddExpressOrderResult) *weapp.AddExpressOrderReturn {
+srv.OnAddExpressOrder(func(mix *qqapp.AddExpressOrderResult) *qqapp.AddExpressOrderReturn {
     // 处理返回结果
 
-    return &weapp.AddExpressOrderReturn{
+    return &qqapp.AddExpressOrderReturn{
         // ...
     }
 })
@@ -2302,16 +2302,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnCancelExpressOrder(func(mix *weapp.CancelExpressOrderResult) *weapp.CancelExpressOrderReturn {
+srv.OnCancelExpressOrder(func(mix *qqapp.CancelExpressOrderResult) *qqapp.CancelExpressOrderReturn {
     // 处理返回结果
 
-    return &weapp.CancelExpressOrderReturn{
+    return &qqapp.CancelExpressOrderReturn{
         // ...
     }
 })
@@ -2331,16 +2331,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnCheckExpressBusiness(func(mix *weapp.CheckExpressBusinessResult) *weapp.CheckExpressBusinessReturn {
+srv.OnCheckExpressBusiness(func(mix *qqapp.CheckExpressBusinessResult) *qqapp.CheckExpressBusinessReturn {
     // 处理返回结果
 
-    return &weapp.CheckExpressBusinessReturn{
+    return &qqapp.CheckExpressBusinessReturn{
         // ...
     }
 })
@@ -2360,16 +2360,16 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-srv, err := weapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
+srv, err := qqapp.NewServer("app-id", "access-token", "aes-key", "mch-id", "api-key", false)
 if err != nil {
     // 处理微信返回错误信息
     return
 }
 
-srv.OnGetExpressQuota(func(mix *weapp.GetExpressQuotaResult) *weapp.GetExpressQuotaReturn {
+srv.OnGetExpressQuota(func(mix *qqapp.GetExpressQuotaResult) *qqapp.GetExpressQuotaReturn {
     // 处理返回结果
 
-    return &weapp.GetExpressQuotaReturn{
+    return &qqapp.GetExpressQuotaReturn{
         // ...
     }
 })
@@ -2389,7 +2389,7 @@ if err := srv.Serve(http.ResponseWriter, *http.Request); err != nil {
 
 import "github.com/llqgit/qqapp/v2"
 
-previewer := weapp.ExpressTemplatePreviewer{
+previewer := qqapp.ExpressTemplatePreviewer{
    // ...
 }
 
@@ -2416,7 +2416,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-updater := weapp.BusinessUpdater{
+updater := qqapp.BusinessUpdater{
    // ...
 }
 
@@ -2443,7 +2443,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-updater := weapp.ExpressPathUpdater{
+updater := qqapp.ExpressPathUpdater{
    // ...
 }
 
@@ -2474,9 +2474,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.BankCard("access-token", "file-path", weapp.RecognizeModeScan)
+res, err := qqapp.BankCard("access-token", "file-path", qqapp.RecognizeModeScan)
 // 或者
-res, err := weapp.BankCardByURL("access-token", "card-url", weapp.RecognizeModePhoto)
+res, err := qqapp.BankCardByURL("access-token", "card-url", qqapp.RecognizeModePhoto)
 if err != nil {
     // 处理一般错误信息
     return
@@ -2499,9 +2499,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.BusinessLicense("access-token", "file-path")
+res, err := qqapp.BusinessLicense("access-token", "file-path")
 // 或者
-res, err := weapp.BusinessLicenseByURL("access-token", "card-url")
+res, err := qqapp.BusinessLicenseByURL("access-token", "card-url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2524,9 +2524,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.DriverLicense("access-token", "file-path")
+res, err := qqapp.DriverLicense("access-token", "file-path")
 // 或者
-res, err := weapp.DriverLicenseByURL("access-token", "card-url")
+res, err := qqapp.DriverLicenseByURL("access-token", "card-url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2549,9 +2549,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.IDCardByURL("access-token", "card-url", weapp.RecognizeModePhoto)
+res, err := qqapp.IDCardByURL("access-token", "card-url", qqapp.RecognizeModePhoto)
 // 或者
-res, err := weapp.IDCard("access-token", "file-path", weapp.RecognizeModeScan)
+res, err := qqapp.IDCard("access-token", "file-path", qqapp.RecognizeModeScan)
 if err != nil {
     // 处理一般错误信息
     return
@@ -2574,9 +2574,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.PrintedText("access-token", "file-path")
+res, err := qqapp.PrintedText("access-token", "file-path")
 // 或者
-res, err := weapp.PrintedTextByURL("access-token", "card-url")
+res, err := qqapp.PrintedTextByURL("access-token", "card-url")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2599,9 +2599,9 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.VehicleLicense("access-token", "file-path", weapp.RecognizeModeScan)
+res, err := qqapp.VehicleLicense("access-token", "file-path", qqapp.RecognizeModeScan)
 // 或者
-res, err := weapp.VehicleLicenseByURL("access-token", "card-url", weapp.RecognizeModePhoto)
+res, err := qqapp.VehicleLicenseByURL("access-token", "card-url", qqapp.RecognizeModePhoto)
 if err != nil {
     // 处理一般错误信息
     return
@@ -2628,7 +2628,7 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.VerifySignature("access-token", "open-id", "data", "signature")
+res, err := qqapp.VerifySignature("access-token", "open-id", "data", "signature")
 if err != nil {
     // 处理一般错误信息
     return
@@ -2655,11 +2655,11 @@ fmt.Printf("返回结果: %#v", res)
 
 import "github.com/llqgit/qqapp/v2"
 
-sender := weapp.SubscribeMessage{
+sender := qqapp.SubscribeMessage{
     ToUser:     mpOpenID,
     TemplateID: "template-id",
     Page:       "mock/page/path",
-    Data: weapp.SubscribeMessageData{
+    Data: qqapp.SubscribeMessageData{
         "first-key": {
             Value: "value",
         },
@@ -2697,7 +2697,7 @@ fmt.Printf("返回结果: %#v", res)
 ```go
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.DecryptMobile("session-key", "encrypted-date", "iv" )
+res, err := qqapp.DecryptMobile("session-key", "encrypted-date", "iv" )
 if err != nil {
     // 处理一般错误信息
     return
@@ -2711,7 +2711,7 @@ fmt.Printf("返回结果: %#v", res)
 ```go
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.DecryptShareInfo("session-key", "encrypted-date", "iv" )
+res, err := qqapp.DecryptShareInfo("session-key", "encrypted-date", "iv" )
 if err != nil {
     // 处理一般错误信息
     return
@@ -2725,7 +2725,7 @@ fmt.Printf("返回结果: %#v", res)
 ```go
 import "github.com/llqgit/qqapp/v2"
 
-res, err := weapp.DecryptUserInfo( "session-key", "raw-data", "encrypted-date", "signature", "iv")
+res, err := qqapp.DecryptUserInfo( "session-key", "raw-data", "encrypted-date", "signature", "iv")
 if err != nil {
     // 处理一般错误信息
     return
